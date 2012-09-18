@@ -1,16 +1,17 @@
-<h1 style="text-align: center">Stock High Chart: Pick a Stock</h1>
-<h3 style="text-align: center">
+<h1 style="text-align: center;">Stock High Chart: Pick a Stock</h1>
+<h3 style="text-align: center;">
 	<a href="https://github.com/michelson/lazy_high_charts" target=>
 Yay lazy_high_chart gem</a></h3>
 <% @chart = Chart.find_by_id(params[:id]) %>
+
 <center>
 Enter another Stock
 <%= text_field :stock_symbol, class: "ticker" %>
-<button id="getdata" style="height: 30px">Get Stock</button></center> 
+<button id="getdata" style="height: 30px;">Get Stock</button></center> 
 
 <br />
 <h3 style="text-align: center"><%= @chart.ticker%> Stock Price</h3>
-<div style="width: 800px; margin: auto auto">
+<div style="width: 800px; margin: auto auto;">
 <div id="chart" style="height: 500px; min-width: 500px"></div>
 </div>
 
@@ -24,7 +25,7 @@ Enter another Stock
 		<% @data.push(t[:close].to_f) %>
 		<% @final.push(@data) %>
 	<%end%>
-<p id="data" style="color: #fff; font-size: 1px"><%= @final.reverse %></p>
+<p id="data" style="color: #fff; font-size: 1px;"><%= @final.reverse %></p>
 
 
 
