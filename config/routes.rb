@@ -4,7 +4,7 @@ HighChart::Application.routes.draw do
 
   # Sample of regular route:
   root to: 'charts#home'
-  get 'charts/home'
+
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
