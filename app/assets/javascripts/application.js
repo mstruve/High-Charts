@@ -16,8 +16,6 @@
 //= require_tree .
 $(function() {
 	
-	$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
-		// Create the chart
 		fbdata= [[1337299200000,38.2318],
 		[1337558400000,34.03],
 		[1337644800000,31],
@@ -105,7 +103,14 @@ $(function() {
 		[1347408000000,	20.931],
 		[1347494400000,	20.713],
 		[1347580800000,	22]];		
-				
+		
+		//$('button#getdata').click(function(){
+			datanew = $('p#data').text();
+			
+			//stockticker = FinanceApp.getStockInfo("MSFT");
+			//alert(h);
+			//FinanceApp.getHistoricalStockInfo("MSFT", new Date(2010, 9, 1), new Date(2012, 9,17), 1)
+			stockticker= $('input:text').val();		
 		window.chart = new Highcharts.StockChart({
 			chart : {
 				renderTo : 'chart'
@@ -116,17 +121,17 @@ $(function() {
 			},
 
 			title : {
-				text: "FB Stock Chart"
+				text: stockticker
 			},
 			
 			series : [{
-				name : 'AAPL',
-				data : fbdata,
+				name : stockticker,
+				data : datanew,
 				tooltip: {
 					valueDecimals: 2
 				}
 			}]
 		});
 	});
-
-});
+//});
+		

@@ -3,8 +3,8 @@ HighChart::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  root to: 'charts#home'
-
+  root to: 'charts#new'
+  resources :charts
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

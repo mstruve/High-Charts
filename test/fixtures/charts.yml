@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ticker: MyString
+  sday: 2012-09-18
+  eday: 2012-09-18
+
+two:
+  ticker: MyString
+  sday: 2012-09-18
+  eday: 2012-09-18

@@ -8,6 +8,8 @@ gem 'quiet_assets', :group => :development
 
 gem 'pg'
 gem 'lazy_high_charts'
+gem 'nas-yahoo_stock'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.
